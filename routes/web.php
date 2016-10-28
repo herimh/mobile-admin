@@ -11,19 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth');
-
-Route::get('/hello', function(){
-    return 'Hello world!';
-})->middleware('auth');
-
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', 'HomeController@index');
+    Route::get('/home', 'HomeController@index')->name('home');
+});
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
