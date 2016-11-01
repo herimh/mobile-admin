@@ -11,9 +11,13 @@
 |
 */
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', 'HomeController@index');
-    Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>  'admin'], function () {
+    CRUD::resource('video', 'VideoController');
+    CRUD::resource('user', 'UserController');
 });
 
-Auth::routes();
+//Auth::routes();
+
+Route::get('/', function(){
+    return redirect('admin');
+});
