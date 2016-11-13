@@ -18,6 +18,8 @@ class CreateVideosTable extends Migration
             $table->string('url', 255);
             $table->string('title', 255);
             $table->longText('description');
+            $table->boolean('active')->default(true);
+            $table->integer('order')->nullable();
             $table->timestamps();
         });
     }

@@ -21,3 +21,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>  'adm
 Route::get('/', function(){
     return redirect('admin');
 });
+
+Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function(){
+    Route::get('token', 'UserController@token')->name('token');
+    Route::post('login', 'UserController@login')->name('api_login');
+    Route::post('confirm_login', 'UserController@loginByToken')->name('api_login_confirm');
+
+    Route::get('videos', 'VideoController@index')->name('api_videos');
+});

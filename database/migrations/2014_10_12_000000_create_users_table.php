@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
+            $table->string('api_token', 100)->nullable();
             $table->string('name')->nullable();
             $table->string('last_name')->nullable();
             $table->integer('level')->default(0);
