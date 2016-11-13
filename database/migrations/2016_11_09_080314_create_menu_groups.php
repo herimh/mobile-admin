@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVideosTable extends Migration
+class CreateMenuGroups extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateVideosTable extends Migration
      */
     public function up()
     {
-        Schema::create('videos', function (Blueprint $table) {
+        Schema::create('menu_groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('url', 255);
-            $table->string('title', 255);
-            $table->longText('description');
-            $table->boolean('active')->default(true);
-            $table->integer('order')->nullable();
+            $table->string('name',100);
+            $table->longText('description')->nulleable();
+            $table->enum('visible_for', ['client', 'partner']);
             $table->timestamps();
         });
     }

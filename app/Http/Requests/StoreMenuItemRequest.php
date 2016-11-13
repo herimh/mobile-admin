@@ -3,7 +3,7 @@ namespace App\Http\Requests;
 
 use Backpack\CRUD\app\Http\Requests\CrudRequest;
 
-class StoreUserRequest extends CrudRequest
+class StoreMenuItemRequest extends CrudRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class StoreUserRequest extends CrudRequest
     public function rules()
     {
         return [
-            'email' => 'required|min:5|max:255'
+            'name' => 'required|min:1|max:255'
         ];
     }
 }
