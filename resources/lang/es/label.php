@@ -13,16 +13,35 @@ return [
     |
     */
 
-    'title' => 'Títutlo',
-    'url' => 'URL',
-    'description' => 'Description',
-    'videos' => 'Videos',
+    'id'                    => 'Id',
+    'title'                 => 'Títutlo',
+    'users'                 => 'Usuarios',
+    'email'                 => 'Correo Electrónico',
+    'name'                  => 'Nombre',
+    'last_name'             => 'Apellidos',
+    'level'                 => 'Nivel',
+    'notes'                 => 'Notas',
+    'password'              => 'Contraseña',
+    'created_at'            => 'F. Creación',
 
-    'users'  => 'Usuarios',
-    'email' => 'Correo Electrónico',
-    'name'  => 'Nombre',
-    'last_name' => 'Apellidos',
-    'level' => 'Nivel',
-    'notes' => 'Notas',
-    'password' => 'Contraseña',
+    //Videos
+    'visible_for'           => 'Visible para',
+    'client'                => 'Cliente',
+    'partner'               => 'Socio',
+    'order'                 => 'Orden',
+    'menu_item'             => 'Menú',
+    'description'           => 'Descripción',
+    'url'                   => 'URL',
+    'videos'                => 'Videos',
+    'video'                 => 'Video',
+
+    //Menus
+    'menu_group'            => 'Menú Grupo',
+    'menu_groups'           => 'Menú Grupos',
+    'icon'                  => 'Icono',
+    'key'                   => 'Clave',
+    'phone'                 => 'Teléfono',
+    'comments'              => 'Comentarios',
+    'contacts'              => 'Contactos',
+    'contact'              => 'Contacto',
 ];

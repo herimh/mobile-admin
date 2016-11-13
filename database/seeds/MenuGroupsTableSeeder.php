@@ -12,9 +12,27 @@ class MenuGroupsTableSeeder extends Seeder
     public function run()
     {
         DB::table('menu_groups')->insert([
-            'name'         => 'Grupo 1',
-            'description'           => 'https://www.youtube.com/watch?v=bYGMH1mTrKg',
+            'name'          => 'Mercadeo',
+            'description'   => '',
             'visible_for'   => 'client',
+            'created_at'    => date('Y-m-d H:i:s'),
+            'updated_at'    => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('menu_groups')->insert([
+            'name'          => 'Empezando',
+            'description'   => '',
+            'visible_for'   => 'client',
+            'created_at'    => date('Y-m-d H:i:s'),
+            'updated_at'    => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('menu_groups')->insert([
+            'name'          => 'Pasos hacia el éxito',
+            'description'   => '',
+            'visible_for'   => 'partner',
+            'created_at'    => date('Y-m-d H:i:s'),
+            'updated_at'    => date('Y-m-d H:i:s')
         ]);
     }
 }

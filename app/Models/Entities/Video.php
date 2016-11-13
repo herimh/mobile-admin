@@ -11,6 +11,10 @@ class Video extends Model
     use CrudTrait;
 
     protected $fillable = [
-        'title', 'description', 'url', 'manu_item_id', 'visible_for'
+        'title', 'description', 'url', 'menu_item_id', 'visible_for'
     ];
+
+    public function menuItem(){
+        return $this->belongsTo(MenuItem::class);
+    }
 }

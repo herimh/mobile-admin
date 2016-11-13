@@ -12,10 +12,83 @@ class MenuItemsTableSeeder extends Seeder
     public function run()
     {
         DB::table('menu_items')->insert([
-            'name'         => 'Item 1',
-            'description'           => 'https://www.youtube.com/watch?v=bYGMH1mTrKg',
-            'menu_group_id'   => '1',
-            'order'   => '1',
+            'name'              => '¿Qué es Mercadeo?',
+            'key'               => '',
+            'icon'              => '',
+            'menu_group_id'     => '1',
+            'order'             => '1',
+            'created_at'        => date('Y-m-d H:i:s'),
+            'updated_at'        => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('menu_items')->insert([
+            'name'              => '¿Qué es Kyani?',
+            'key'               => '',
+            'icon'              => 'send',
+            'menu_group_id'     => '2',
+            'order'             => '1',
+            'created_at'        => date('Y-m-d H:i:s'),
+            'updated_at'        => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('menu_items')->insert([
+            'name'              => 'Oportunidad',
+            'key'               => '',
+            'icon'              => 'trending_up',
+            'menu_group_id'     => '2',
+            'order'             => '2',
+            'created_at'        => date('Y-m-d H:i:s'),
+            'updated_at'        => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('menu_items')->insert([
+            'name'              => 'Producto',
+            'key'               => '',
+            'icon'              => 'shopping_basket',
+            'menu_group_id'     => '2',
+            'order'             => '3',
+            'created_at'        => date('Y-m-d H:i:s'),
+            'updated_at'        => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('menu_items')->insert([
+            'name'              => '¿Tienes dudas?',
+            'key'               => 'contact_form',
+            'icon'              => 'speaker_notes',
+            'menu_group_id'     => '2',
+            'order'             => '4',
+            'created_at'        => date('Y-m-d H:i:s'),
+            'updated_at'        => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('menu_items')->insert([
+            'name'              => 'Lista de prospectación',
+            'key'               => '',
+            'icon'              => '',
+            'menu_group_id'     => '3',
+            'order'             => '1',
+            'created_at'        => date('Y-m-d H:i:s'),
+            'updated_at'        => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('menu_items')->insert([
+            'name'              => 'Prospectación',
+            'key'               => '',
+            'icon'              => '',
+            'menu_group_id'     => '3',
+            'order'             => '2',
+            'created_at'        => date('Y-m-d H:i:s'),
+            'updated_at'        => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('menu_items')->insert([
+            'name'              => 'Tutoriales para el seguimeinto y ...',
+            'key'               => '',
+            'icon'              => '',
+            'menu_group_id'     => '3',
+            'order'             => '3',
+            'created_at'        => date('Y-m-d H:i:s'),
+            'updated_at'        => date('Y-m-d H:i:s')
         ]);
     }
 }

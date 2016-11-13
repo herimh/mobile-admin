@@ -18,4 +18,8 @@ class MenuItem extends Model
     public function menuGroup(){
     	return $this->belongsTo(MenuGroup::class);
     }
+
+    public function videos(){
+    	return $this->hasMany(Video::class);
+    }
 }

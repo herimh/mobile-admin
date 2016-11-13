@@ -25,7 +25,10 @@
             <li><a href="{{ url(config('backpack.base.route_prefix').'/register') }}">{{ trans('backpack::base.register') }}</a></li>
             @endif
         @else
+            <li><a href="{{ url('admin/menu_group') }}"><i class="fa fa-users"></i> <span>{{ trans('label.menu_group') }}</span></a></li>
+            <li><a href="{{ url('admin/menu_item') }}"><i class="fa fa-users"></i> <span>{{ trans('label.menu_item') }}</span></a></li>
             <li><a href="{{ url('admin/video') }}"><i class="fa fa-film"></i> <span>{{ trans('label.videos') }}</span></a></li>
+            <li><a href="{{ url('admin/contact') }}"><i class="fa fa-film"></i> <span>{{ trans('label.contacts') }}</span></a></li>
             <li><a href="{{ url('admin/user') }}"><i class="fa fa-users"></i> <span>{{ trans('label.users') }}</span></a></li>
             <li><a href="{{ url(config('backpack.base.route_prefix').'/logout') }}"><i class="fa fa-btn fa-sign-out"></i> {{ trans('backpack::base.logout') }}</a></li>
         @endif
