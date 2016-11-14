@@ -14,6 +14,6 @@ class MenuGroup extends Model
     ];
 
     public function menuItems(){
-    	return $this->hasMany(MenuItem::class);
+    	return $this->hasMany(MenuItem::class)->orderBy('order', 'ASC');
     }
 }

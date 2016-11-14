@@ -16,4 +16,8 @@ class VideoController extends Controller
         return $videos;
     }
 
+    public function showByMenuItem($menuItem){
+        return Video::where('menu_item_id', $menuItem)->orderBy('order', 'ASC')->get();
+    }
+
 }
