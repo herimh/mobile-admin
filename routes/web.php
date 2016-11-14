@@ -31,4 +31,10 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function(){
     Route::post('login', 'UserController@login')->name('api_login');
     Route::post('confirm_login', 'UserController@loginByToken')->name('api_login_confirm');
     Route::get('videos', 'VideoController@index')->name('api_videos');
+
+    Route::get('client_menu', 'MenuGroupController@listForClient')->name('client_menu');
+    Route::get('partner_menu', 'MenuGroupController@listAll')->name('partner_menu');
+
+    //Store contact form
+    Route::post('contact', 'ContactController@store')->name('store_contact');
 });
