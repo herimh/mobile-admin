@@ -14,7 +14,7 @@ class MenuItemsTableSeeder extends Seeder
         DB::table('menu_items')->insert([
             'name'              => '¿Qué es Mercadeo?',
             'key'               => '',
-            'icon'              => '',
+            'icon'              => 'language',
             'menu_group_id'     => '1',
             'order'             => '1',
             'created_at'        => date('Y-m-d H:i:s'),
@@ -64,7 +64,7 @@ class MenuItemsTableSeeder extends Seeder
         DB::table('menu_items')->insert([
             'name'              => 'Lista de prospectación',
             'key'               => '',
-            'icon'              => '',
+            'icon'              => 'reorder',
             'menu_group_id'     => '3',
             'order'             => '1',
             'created_at'        => date('Y-m-d H:i:s'),
@@ -74,7 +74,7 @@ class MenuItemsTableSeeder extends Seeder
         DB::table('menu_items')->insert([
             'name'              => 'Prospectación',
             'key'               => '',
-            'icon'              => '',
+            'icon'              => 'reorder',
             'menu_group_id'     => '3',
             'order'             => '2',
             'created_at'        => date('Y-m-d H:i:s'),
@@ -84,7 +84,7 @@ class MenuItemsTableSeeder extends Seeder
         DB::table('menu_items')->insert([
             'name'              => 'Tutoriales para el seguimeinto y ...',
             'key'               => '',
-            'icon'              => '',
+            'icon'              => 'reorder',
             'menu_group_id'     => '3',
             'order'             => '3',
             'created_at'        => date('Y-m-d H:i:s'),

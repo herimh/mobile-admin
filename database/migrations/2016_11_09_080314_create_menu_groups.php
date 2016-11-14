@@ -16,7 +16,7 @@ class CreateMenuGroups extends Migration
         Schema::create('menu_groups', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',100);
-            $table->longText('description')->nulleable();
+            $table->longText('description')->nullable();
             $table->enum('visible_for', ['client', 'partner']);
             $table->timestamps();
         });

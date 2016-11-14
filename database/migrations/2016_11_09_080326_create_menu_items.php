@@ -16,7 +16,7 @@ class CreateMenuItems extends Migration
         Schema::create('menu_items', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',100);
-            $table->string('key', 100);
+            $table->string('key', 100)->nullable();
             $table->string('icon', 100)->nullable();
             $table->integer('menu_group_id')->unsigned();
             $table->foreign('menu_group_id')->references('id')->on('menu_groups');

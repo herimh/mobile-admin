@@ -17,7 +17,7 @@ class CreateVideosTable extends Migration
             $table->increments('id');
             $table->string('url', 255);
             $table->string('title', 255);
-            $table->longText('description');
+            $table->text('description')->nullable();
             $table->boolean('active')->default(true);
             $table->integer('order')->nullable();
             $table->integer('menu_item_id')->unsigned();

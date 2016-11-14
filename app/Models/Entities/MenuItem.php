@@ -11,7 +11,7 @@ class MenuItem extends Model
     use CrudTrait;
 
     protected $fillable = [
-        'name', 'description', 'menu_group_id', 'order'
+        'name', 'description', 'menu_group_id', 'order', 'icon', 'key'
     ];
 
 
