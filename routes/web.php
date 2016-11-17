@@ -13,7 +13,7 @@
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' =>  'admin'], function () {
     CRUD::resource('video', 'VideoController');
-    CRUD::resource('user', 'UserController');
+    //CRUD::resource('user', 'UserController');
     CRUD::resource('menu_group', 'MenuGroupController');
     CRUD::resource('menu_item', 'MenuItemController');
     CRUD::resource('contact', 'ContactController');

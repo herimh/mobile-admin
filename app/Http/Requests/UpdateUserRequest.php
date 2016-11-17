@@ -24,7 +24,9 @@ class UpdateUserRequest extends CrudRequest
     public function rules()
     {
         return [
-            'email' => 'required|min:5|max:255'
+            'name' => ['required'],
+            'email' => ['required', 'email', 'unique:users,email,'.$this->route('user')],
+            'password' => ['required_with:password_confirmation', 'confirmed']
         ];
     }
 }
