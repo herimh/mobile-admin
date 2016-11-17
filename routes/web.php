@@ -39,4 +39,5 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function(){
 
     //Store contact form
     Route::post('contact', 'ContactController@store')->name('store_contact');
+    Route::post('register_user', 'UserController@register')->name('register_user');
 });

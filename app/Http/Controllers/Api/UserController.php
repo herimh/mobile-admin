@@ -42,4 +42,17 @@ class UserController extends Controller
 
         return ['failed' => true];
     }
+    
+    public function register(Request $request){
+        $registerUserData = $request->all();
+
+        $userRegister = User::create($registerUserData);
+
+        if($userRegister){
+            //TODO: send email to admin with this data
+            return $userRegister;
+        }
+
+        return ['success' => 'false', 'message' => trans('message.failed_save_user')];
+    }
 }

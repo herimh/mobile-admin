@@ -11,7 +11,7 @@ class Contact extends Model
     use CrudTrait;
 
     protected $fillable = [
-        'name', 'email', 'phone', 'comments'
+        'name', 'email', 'phone', 'comments', 'roles'
     ];
 
 }
