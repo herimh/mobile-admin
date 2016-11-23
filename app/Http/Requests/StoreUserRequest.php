@@ -24,7 +24,7 @@ class StoreUserRequest extends CrudRequest
     public function rules()
     {
         return [
-            'email' => 'required|min:5|max:255'
+            'name' => ['required']
         ];
     }
 }
