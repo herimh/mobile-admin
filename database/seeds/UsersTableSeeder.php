@@ -24,5 +24,21 @@ class UsersTableSeeder extends Seeder
             'last_name' =>  'Rodriguez',
             'level'     =>  1,
         ]);
+
+        $role = new \Backpack\PermissionManager\app\Models\Role();
+        $role->name = 'super_admin';
+        $role->save();
+
+        $role = new \Backpack\PermissionManager\app\Models\Role();
+        $role->name = 'admin';
+        $role->save();
+
+        $role = new \Backpack\PermissionManager\app\Models\Role();
+        $role->name = 'mobile_client';
+        $role->save();
+
+        $role = new \Backpack\PermissionManager\app\Models\Role();
+        $role->name = 'mobile_partner';
+        $role->save();
     }
 }

@@ -33,6 +33,8 @@ class VideoController extends CrudController
             'entity' => 'menuItem', 'attribute' => 'name', 'model' => MenuItem::class]);
         $this->crud->addField(['name' => 'visible_for', 'type' => 'select_from_array', 'label' => trans('label.visible_for'),
             'options' => ['client' => trans('label.client'), 'partner' => trans('label.partner')]]);
+        $this->crud->addField(['name' => 'url_type', 'type' => 'select_from_array', 'label' => trans('label.url_type'),
+            'options' => ['video' => trans('label.video'), 'link' => trans('label.link')]]);
         $this->crud->addField(['name' => 'order', 'type' => 'number', 'label' => trans('label.order')]);
         $this->crud->addField(['name' => 'description', 'type' => 'ckeditor', 'label' => trans('label.description')]);
     }

@@ -20,6 +20,7 @@ class CreateVideosTable extends Migration
             $table->text('description')->nullable();
             $table->boolean('active')->default(true);
             $table->integer('order')->nullable();
+            $table->enum('url_type', ['video', 'link']);
             $table->integer('menu_item_id')->unsigned();
             $table->foreign('menu_item_id')->references('id')->on('menu_items');
             $table->enum('visible_for', ['client', 'partner']);

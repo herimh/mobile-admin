@@ -34,6 +34,8 @@ return [
     'url'                   => 'URL',
     'videos'                => 'Videos',
     'video'                 => 'Video',
+    'url_type'              => 'Tipo de URL',
+    'link'                  => 'Link',
 
     //Menus
     'menu_group'            => 'Menú Grupo',
