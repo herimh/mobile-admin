@@ -24,7 +24,7 @@
             @if (config('backpack.base.registration_open'))
             <li><a href="{{ url(config('backpack.base.route_prefix').'/register') }}">{{ trans('backpack::base.register') }}</a></li>
             @endif
-        @else
+        @elseif(Auth::user()->hasRole('super_admin') || Auth::user()->hasRole('admin'))
             <li><a href="{{ url('admin/menu_group') }}"><i class="fa fa-users"></i> <span>{{ trans('label.menu_group') }}</span></a></li>
             <li><a href="{{ url('admin/menu_item') }}"><i class="fa fa-users"></i> <span>{{ trans('label.menu_item') }}</span></a></li>
             <li><a href="{{ url('admin/video') }}"><i class="fa fa-film"></i> <span>{{ trans('label.videos') }}</span></a></li>

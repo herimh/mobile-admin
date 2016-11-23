@@ -38,6 +38,7 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function(){
     Route::get('client_menu', 'MenuGroupController@listForClient')->name('client_menu');
 
     //Store contact form
+    Route::get('contact', 'ContactController@index')->name('list_contact');
     Route::post('contact', 'ContactController@store')->name('store_contact');
     Route::post('register_user', 'UserController@register')->name('register_user');
 });

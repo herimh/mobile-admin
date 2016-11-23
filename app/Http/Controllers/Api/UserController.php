@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -47,9 +48,13 @@ class UserController extends Controller
         $registerUserData = $request->all();
 
         $userRegister = User::create($registerUserData);
+        if($userRegister)
+        {
+            $role = Role::findByName('mobile_client');
+            if($role){
+                $userRegister->assignRole($role);
+            }
 
-        if($userRegister){
-            //TODO: send email to admin with this data
             return $userRegister;
         }
 

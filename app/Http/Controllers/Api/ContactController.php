@@ -3,18 +3,26 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactRegistered;
 use App\Models\Entities\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
+    public function index(){
+
+    }
+
     public function store(Request $request){
         $contactData = $request->all();
 
         $contact = Contact::create($contactData);
 
-        if($contact){
-            //TODO: send email to admin with this data
+        if($contact)
+        {
+            Mail::to('betty.jimcruz@gmail.com')->send(new ContactRegistered($contact));
+
             return $contact;
         }
 

@@ -19,6 +19,7 @@
           <!-- ================================================ -->
           <!-- ==== Recommended place for admin menu items ==== -->
           <!-- ================================================ -->
+          @if(Auth::user()->hasRole('super_admin') || Auth::user()->hasRole('admin'))
           <li><a href="{{ url(config('backpack.base.route_prefix').'/dashboard') }}"><i class="fa fa-dashboard"></i> <span>{{ trans('backpack::base.dashboard') }}</span></a></li>
           <li><a href="{{ url('admin/menu_group') }}"><i class="fa fa-film"></i> <span>{{ trans('label.menu_group') }}</span></a></li>
           <li><a href="{{ url('admin/menu_item') }}"><i class="fa fa-film"></i> <span>{{ trans('label.menu_item') }}</span></a></li>
@@ -32,6 +33,7 @@
               <li><a href="{{ url('admin/permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
             </ul>
           </li>
+          @endif
 
 
           <!-- ======================================= -->
