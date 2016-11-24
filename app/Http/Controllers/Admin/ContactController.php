@@ -23,6 +23,8 @@ class ContactController extends CrudController
         $this->crud->addColumn(['name' => 'name', 'label' => trans('label.name')]);
         $this->crud->addColumn(['name' => 'email', 'label' => trans('label.email')]);
         $this->crud->addColumn(['name' => 'phone', 'label' => trans('label.phone')]);
+        $this->crud->addColumn(['name' => 'whatsapp', 'label' => trans('label.whatsapp')]);
+        $this->crud->addColumn(['name' => 'country', 'label' => trans('label.country')]);
         $this->crud->addColumn(['name' => 'comments', 'label' => trans('label.comments')]);
     }
 

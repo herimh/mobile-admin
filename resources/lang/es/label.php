@@ -46,4 +46,7 @@ return [
     'comments'              => 'Comentarios',
     'contacts'              => 'Contactos',
     'contact'              => 'Contacto',
+
+    'whatsapp'              => 'WhatsApp',
+    'country'               => 'Pais',
 ];
