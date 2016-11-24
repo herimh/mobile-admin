@@ -21,7 +21,7 @@ class ContactController extends Controller
 
         if($contact)
         {
-            Mail::to(['enriquerguezs@hotmail.com','enriquerquezs@gmail.com','heri185403@gmail.com'])->send(new ContactRegistered($contact));
+            Mail::to(['enriquerguezs@hotmail.com','enriquerguezs@gmail.com'])->send(new ContactRegistered($contact));
 
             return $contact;
         }

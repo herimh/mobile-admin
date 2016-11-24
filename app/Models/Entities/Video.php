@@ -11,7 +11,7 @@ class Video extends Model
     use CrudTrait;
 
     protected $fillable = [
-        'title', 'description', 'url', 'menu_item_id', 'visible_for', 'url_type'
+        'title', 'description', 'url', 'menu_item_id', 'visible_for', 'url_type', 'order'
     ];
 
     public function menuItem(){
