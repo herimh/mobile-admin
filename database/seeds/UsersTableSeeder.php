@@ -13,13 +13,13 @@ class UsersTableSeeder extends Seeder
     {
         factory('App\User')->create([
             'email'     =>  'mobile-admin@mikyanidist.com',
-            'password'  =>  bcrypt('demo1.'),
+            'password'  =>  bcrypt('4dm1n..'),
             'name'      =>  'Admin',
         ]);
 
         factory('App\User')->create([
             'email'     =>  'enriquerguezs@hotmail.com',
-            'password'  =>  bcrypt('demo1.'),
+            'password'  =>  bcrypt('dm1n..'),
             'name'      =>  'Enrique',
             'last_name' =>  'Rodriguez',
             'level'     =>  1,
