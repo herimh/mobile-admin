@@ -24,6 +24,7 @@ class VideoController extends CrudController
         $this->crud->addColumn(['name' => 'menu_item', 'type'=>'select', 'label' => trans('label.menu_item'),
             'entity' => 'menuItem', 'attribute' => 'name', 'model'=> MenuItem::class]);
         $this->crud->addColumn(['name' => 'order', 'label' => trans('label.order')]);
+        $this->crud->addColumn(['name' => 'url_type', 'label' => trans('label.url_type')]);
         $this->crud->addColumn(['name' => 'created_at', 'label' => trans('label.created_at')]);
 
         //Form for create and update

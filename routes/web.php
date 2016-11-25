@@ -34,7 +34,7 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function(){
 
     Route::get('menu_item/{menuItem}/videos', 'VideoController@showByMenuItem')->name('menu_videos');
 
-    Route::get('partner_menu', 'MenuGroupController@listForPartner');
+    Route::get('partner_menu/{userId}', 'MenuGroupController@listForPartner');
     Route::get('client_menu', 'MenuGroupController@listForClient')->name('client_menu');
 
     //Store contact form

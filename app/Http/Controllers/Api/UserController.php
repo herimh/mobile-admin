@@ -47,6 +47,10 @@ class UserController extends Controller
     public function register(Request $request){
         $registerUserData = $request->all();
 
+        if(isset($registerUserData['password'])){
+            $registerUserData['password'] = bcrypt($registerUserData['password']);
+        }
+
         $userRegister = User::create($registerUserData);
         if($userRegister)
         {
