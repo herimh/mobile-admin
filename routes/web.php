@@ -28,8 +28,8 @@ Route::get('/', function(){
 
 Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'middleware' =>  'cors'], function(){
     Route::get('token', 'UserController@token')->name('token');
-    Route::match(['post','options'], 'login', 'UserController@login')->name('api_login');
-    Route::match(['post','options'], 'confirm_login', 'UserController@loginByToken')->name('api_login_confirm');
+    Route::match(['post','get'], 'login', 'UserController@login')->name('api_login');
+    Route::match(['post','get'], 'confirm_login', 'UserController@loginByToken')->name('api_login_confirm');
     //Route::get('videos', 'VideoController@index')->name('api_videos');
 
     Route::get('menu_item/{menuItem}/videos', 'VideoController@showByMenuItem')->name('menu_videos');
@@ -39,6 +39,6 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'middleware' =>  'cors
 
     //Store contact form
     Route::get('contact', 'ContactController@index')->name('list_contact');
-    Route::match(['post','options'], 'contact', 'ContactController@store')->name('store_contact');
-    Route::match(['post','options'], 'register_user', 'UserController@register')->name('register_user');
+    Route::match(['post','get'], 'contact', 'ContactController@store')->name('store_contact');
+    Route::match(['post','get'], 'register_user', 'UserController@register')->name('register_user');
 });
